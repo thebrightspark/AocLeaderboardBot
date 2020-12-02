@@ -18,9 +18,9 @@ import org.springframework.context.annotation.Configuration
 class Config {
 	@Bean
 	fun jda(
-        listener: Listener,
-        @Value("\${token}") token: String
-    ): JDA = JDABuilder.createLight(token)
+		listener: Listener,
+		@Value("\${token}") token: String
+	): JDA = JDABuilder.createLight(token)
 		.setEventManager(AnnotatedEventManager())
 		.addEventListeners(listener)
 		.build()
