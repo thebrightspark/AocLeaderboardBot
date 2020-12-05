@@ -142,6 +142,7 @@ class Listener(
 			setTitle("Advent Of Code ${leaderboard.event} Leaderboard", webUrl)
 			setDescription(leaderboardList)
 			setFooter(lastLeaderboardAge)
+//			setTimestamp(Instant.ofEpochSecond(lastRequestTimestamp))
 		}
 
 		stopwatch.stop()
@@ -173,6 +174,7 @@ class Listener(
 				""".trimMargin()
 				)
 				setFooter(lastLeaderboardAge)
+//				setTimestamp(Instant.ofEpochSecond(lastRequestTimestamp))
 			}
 		} ?: run {
 			event.reply("Couldn't find leaderboard member with name '$memberName`!")
